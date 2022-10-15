@@ -15,19 +15,19 @@ There are several challenges that need to be tackled which would be in the proce
 
 The entire structure when called through a process will run in the following order and the output of each module will be logged into a table in database :
 
-                                                            BASIC DATA FETCHED THROUGH FILES OR DATABASE
-                                                                                ↓
-                                                                                ↓
-                                                     THE EXTRACTED TEXT IS SENT TO THE PHRASE DETECTION MODULE
-                                                                                ↓
-                                                                                ↓
-                                                           THE OUTPUT IS THEN SENT TO THE LEMMATIZER MODULE
-                                                                                ↓
-                                                                                ↓
-                                                  THEN WITH THE PROVIDED TEST DATA, THE NLP MODEL IS CREATED & TRAINED
-                                                                                ↓
-                                                                                ↓
-                                        LATER THE LEMMATIZER MODULE OUTPUT TEXT OUTPUT IS THEN SENT INTO CUSTOM NER NLP PIPELINE
-                                                                                ↓
-                                                                                ↓
-                                          THE OUTPUT IS THEN STORED IN DATABASE AND MAPPED WITH THE RELEVANT DIMENSION KEYS
+                                             BASIC DATA FETCHED THROUGH FILES OR DATABASE
+                                                                   ↓
+                                                                   ↓
+                                       THE EXTRACTED TEXT IS SENT TO THE PHRASE DETECTION MODULE
+                                                                   ↓
+                                                                   ↓
+                                            THE OUTPUT IS THEN SENT TO THE LEMMATIZER MODULE
+                                                                   ↓
+                                                                   ↓
+                                  THEN WITH THE PROVIDED TEST DATA, THE NLP MODEL IS CREATED & TRAINED
+                                                                   ↓
+                                                                   ↓
+                        LATER THE LEMMATIZER MODULE OUTPUT TEXT OUTPUT IS THEN SENT INTO CUSTOM NER NLP PIPELINE
+                                                                   ↓
+                                                                   ↓
+                            THE OUTPUT IS THEN STORED IN DATABASE AND MAPPED WITH THE RELEVANT DIMENSION KEYS
