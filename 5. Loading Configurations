@@ -1,0 +1,2 @@
+# this command will have to be run on the anaconda prompt to load the config.cfg from the base_config.cfg which can be donwloaded from spacy.io website
+python -m spacy init fill-config "D:\Python Data Science\NLP\UPDATED_NLP_COURSE\NER\base_config.cfg" "D:\Python Data Science\NLP\UPDATED_NLP_COURSE\NER\config.cfg"
