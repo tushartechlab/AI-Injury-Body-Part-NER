@@ -1,0 +1,2 @@
+#this command has to be run on the anaconda promp to train the model.
+python -m spacy train "D:\\Python Data Science\\NLP\\UPDATED_NLP_COURSE\\NER\\config.cfg" --output "D:\\Python Data Science\\NLP\\UPDATED_NLP_COURSE\\NER\\" --paths.train "D:\\Python Data Science\\NLP\\UPDATED_NLP_COURSE\\NER\\train.spacy" --paths.dev "D:\\Python Data Science\\NLP\\UPDATED_NLP_COURSE\\NER\\train.spacy"
