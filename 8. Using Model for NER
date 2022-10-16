@@ -1,0 +1,22 @@
+import pyodbc 
+import spacy
+
+nlp_ner = spacy.load("D:\\Python Data Science\\NLP\\UPDATED_NLP_COURSE\\NER\\model-best")
+
+server = 'localhost'   
+database = 'NLP'   
+username = 'sa'   
+password = 'Admin@123'   
+cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)  
+cursor = cnxn.cursor()  
+cursor.execute('select ClaimsID, NewDescription from ner.[LemmatizerData] with(nolock)')
+data = cursor.fetchall()
+cursor.commit()
+
+for i,b in data:
+    doc = nlp_ner(b)
+    for ent in doc.ents:
+        cursor.execute("insert into ner.entitylist(Entitylabel,entityvalue,ClaimsID) VALUES (" + "'" + ent.label_ + "','" + ent.text + "','" + str(i) + "')")
+        cursor.commit()
+
+cnxn.commit()
