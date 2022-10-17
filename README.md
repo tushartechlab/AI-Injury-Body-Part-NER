@@ -8,6 +8,8 @@ There are couple of challenges that need to be tackled which would be in the pro
 
 2. Currently the Phrase Detection is static and it needs to be done through a file where we provide the patterns and they get dynamically added to the matcher.
 
+3. We also need to implement spell checker before the phrase detection module so that any spelling issues are solved so that nothing is missed out in Phrase Detection, Lemmatizer and NER.
+
 Please Note : The paths, configurations, variables like server, UID, PWD are static defined currently, they need to be replaced using argument list sys.argv[1],sys.argv[2],sys.argv[3] and so on.
 When this will be used inside of SSIS package they will be passed as parameters to the execute process task where python process will be called, with first argument as the file and then subsequent arguments which will be UID, PWD and so on. These will be inside SSIS, which will be passed as variables or project parameters which in turn are fetched from the environment veriables configured in SSIS Catalog or SQL Server Job. Locally they can be taken from project parameters.
 
